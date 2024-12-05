@@ -1,0 +1,320 @@
+# research_task:
+#   description: >
+#     Conduct a thorough research about {topic}
+#     Make sure you find any interesting and relevant information given
+#     the current year is 2024.
+#   expected_output: >
+#     A list with 10 bullet points of the most relevant information about {topic} and each bullet point should be a separate line.
+#   agent: researcher
+
+# reporting_task:
+#   description: >
+#     Review the context you got and expand each topic into a full section for a report.
+#     Make sure the report is detailed and contains any and all relevant information.
+  # expected_output: >
+  #   A fully fledge reports with the mains topics, each with a full section of information.
+  #   Formatted as markdown without '```'
+#   agent: reporting_analyst
+
+# Tier1_task:
+#   description: >
+#     Analyze the following content and prepare a comprehensive indian legal draft: {topic}
+#     Consider current regulations, best practices, and ensure all relevant indian legal aspects
+#     are properly formatted and structured.
+#   expected_output: >
+#     A structured initial legal draft document containing:
+#     - Report should be in bullet points
+#     - Proper indian legal formatting and structure
+#     - Clear identification of parties
+#     - Relevant indian legal clauses and provisions
+#     - Required indian legal terminology
+#     - Any necessary declarations or attestations
+#   agent: Tier1_agent
+
+# Tier2_task:
+#   description: >
+#     Review the draft and transform it into a final, legally-compliant document following best indian legal practices.
+#     Ensure all indian legal requirements are met and the document is ready for official use in indian courts.
+#   expected_output: >
+#     A final, legally-ready document that:
+#     - Report should be in bullet points
+#     - Follows proper indian legal formatting
+#     - Contains all required indian legal elements
+#     - Is properly structured
+#     - Is ready for immediate legal use or filing in indian courts
+#     - Includes any required attestation clauses or signature blocks
+#   agent: Tier2_agent
+
+# Tier3_task:
+#   name: "Indian Legal Research and Document Preparation"
+#   description: >
+#     Comprehensive legal research within Indian jurisdiction followed by preparation 
+#     of court-ready documents based on research findings
+
+#   legal_research:
+#     case_law_analysis:
+#       - Search Supreme Court and High Court judgments
+#       - Analyze relevant precedents from Indian courts
+#       - Review latest judicial interpretations
+#       - Document ratio decidendi of key cases
+#       - Track judgment evolution on the subject
+
+#     statutory_research:
+#       - Identify applicable Indian laws and regulations
+#       - Research relevant sections and provisions
+#       - Check latest amendments and notifications
+#       - Review parliamentary debates if relevant
+#       - Analyze statutory interpretations
+
+#     procedural_research:
+#       - Study applicable court rules and procedures
+#       - Research limitation periods
+#       - Identify jurisdictional requirements
+#       - Review filing procedures
+#       - Check court fees and stamp duty requirements
+
+#     secondary_research:
+#       - Review legal commentaries by Indian authors
+#       - Analyze law commission reports
+#       - Study academic articles and journals
+#       - Check bar council guidelines
+#       - Review legal treatises
+
+#   research_sources:
+#     primary_sources:
+#       - Legal journals and reviews
+#       - Commentary books
+#       - Legal databases
+#       - Law commission reports
+#       - Academic publications
+#       # - Indian Kanoon
+#       # - SCC Online
+#       # - Manupatra
+#       # - Official Gazette notifications
+#       # - Court websites
+#       # - Bare Acts
+    
+#     secondary_sources:
+#       - Indian Kanoon
+#       - SCC Online
+#       - Manupatra
+#       - Official Gazette notifications
+#       - Court websites
+#       - Bare Acts
+#       # - Legal journals and reviews
+#       # - Commentary books
+#       # - Legal databases
+#       # - Law commission reports
+#       # - Academic publications
+
+#   document_preparation:
+#     template_research:
+#       - Identify authoritative document templates from Indian courts
+#       - Research Mogha's Manual and other standard legal drafting guides
+#       - Analyze court-specific template requirements
+#       - Document state-wise variations in formats
+#       - Compile standard clauses and attestation requirements
+
+#     document_structure:
+#       - Title and cause title formatting
+#       - Party details and description format
+#       - Pleading body structure
+#       - Prayer clause formatting
+#       - Verification and attestation blocks
+#       - Exhibit and annexure formatting
+#       - Signature block requirements
+#       - Advocate details formatting
+
+#     content_requirements:
+#       - Mandatory declarations and affirmations
+#       - Required legal phrases and terminology
+#       - Standard clauses by document type
+#       - Jurisdiction-specific requirements
+#       - Language and translation requirements
+
+#   research_output:
+#     legal_analysis:
+#       - Summary of relevant laws and sections
+#       - Analysis of applicable precedents
+#       - Key legal principles identified
+#       - Jurisdiction-specific requirements
+#       - Potential legal challenges
+#       - Supporting case citations
+#       - Statutory references
+
+#     document_components:
+#       - Legal grounds based on research
+#       - Cited precedents and authorities
+#       - Relevant statutory provisions
+#       - Supporting evidence requirements
+#       - Counter-argument considerations
+#       - Jurisdiction establishment
+#       - Relief sought based on precedents
+
+#   success_criteria:
+#     research_quality:
+#       - Comprehensive coverage of relevant laws
+#       - Up-to-date legal positions cited
+#       - Proper citation of authorities
+#       - Clear legal reasoning
+#       - Strong precedent support
+#       - Jurisdiction-specific compliance
+
+#     document_quality:
+#       - Research findings properly incorporated
+#       - Accurate legal citations
+#       - Strong legal arguments
+#       - Proper formatting and structure
+#       - Court-ready presentation
+#       - Complete supporting documentation
+#   expected_output: >
+#     A fully fledge reports with the mains topics, each with a full section of information in bullet points and each bullet point should be a separate line.
+#     Formatted as markdown without '```'
+#   agent: Tier3_agent
+
+  
+# Tier1_task:
+#   description: >
+#     Analyze the following content and prepare a comprehensive, detailed Indian legal draft: {topic}  
+#     Include extensive details, current regulations, best practices, and ensure all relevant Indian legal aspects are  
+#     properly formatted and structured.
+#   expected_output: >
+#     A structured initial legal draft document containing:  
+#     - Detailed bullet points covering all aspects  
+#     - Proper Indian legal formatting and structure  
+#     - Clear identification of parties and roles  
+#     - Comprehensive Indian legal clauses and provisions  
+#     - Extensive relevant Indian legal terminology  
+#     - All necessary declarations, attestations, and contextual details
+#   agent: Tier1_agent
+
+# Tier2_task:
+#   description: >
+#     Review the draft and transform it into a final, detailed, and legally-compliant document following best Indian legal practices.  
+#     Ensure the document is comprehensive, meets all Indian legal requirements, and is ready for official use in Indian courts.
+#   expected_output: >
+#     A final, highly detailed legally-ready document that:  
+#     - Includes bullet points for clear segmentation  
+#     - Follows proper Indian legal formatting  
+#     - Contains all required Indian legal elements and additional details  
+#     - Is properly structured and legally exhaustive  
+#     - Is court-ready for immediate legal use or filing  
+#     - Includes detailed attestation clauses and signature blocks  
+#   agent: Tier2_agent
+
+# Tier3_task:
+#   description: >
+#     Conduct thorough research on Indian legal frameworks, precedents, and jurisdictional requirements  
+#     to enhance the document for compliance with Indian legal standards.
+#   expected_output: >
+#     A researched and refined legal document containing:  
+#     - Detailed summaries of relevant laws and case precedents  
+#     - Proper incorporation of Indian legal templates and procedural guidelines  
+#     - Exhaustive statutory references and compliance elements  
+#     - Enhanced content with multi-jurisdictional applicability  
+#     - Comprehensive supporting details, formatted and ready for court submission  
+#   agent: Tier3_agent
+  
+
+#claude2
+Tier1_task:
+  description: >
+    Comprehensive Legal Research and Analysis Task
+    
+    Conduct an exhaustive research and analysis for the following legal document: {topic}
+    
+    Key Objectives:
+    - Perform in-depth investigation of legal requirements
+    - Analyze relevant statutory provisions and judicial precedents
+    - Identify critical legal frameworks and procedural guidelines
+    - Map out comprehensive legal landscape for the specific document type
+    
+    Specific Research Focus:
+    - Jurisdictional legal requirements
+    - Applicable statutes and regulations
+    - Recent judicial interpretations
+    - Potential legal challenges and mitigation strategies
+    - Contextual legal nuances specific to the document type
+  
+  expected_output: >
+    Comprehensive Legal Research Report containing:
+    - Detailed analysis of legal framework
+    - Extensive bullet points covering:
+      * Applicable legal statutes
+      * Relevant judicial precedents
+      * Procedural requirements
+      * Jurisdictional considerations
+    - Comprehensive legal context and background
+    - Identification of potential legal risks and challenges
+    - Recommended legal strategies and approaches
+    - Preliminary document structure and key elements
+    - Extensive legal terminology and citation references
+    - Foundational research for document drafting
+  
+  agent: Tier1_agent
+
+Tier2_task:
+  description: >
+    Legal Document Drafting and Comprehensive Preparation Task
+    
+    Transform the research findings into a meticulously crafted legal document
+    
+    Key Drafting Objectives:
+    - Convert research insights into a structured legal document
+    - Ensure absolute legal compliance and precision
+    - Develop comprehensive clauses addressing all potential scenarios
+    - Create a document ready for legal review and potential court submission
+    
+    Drafting Specifications:
+    - Incorporate all research findings from Tier1 task
+    - Develop clear, legally precise document structure
+    - Address potential legal contingencies
+    - Ensure jurisdictional relevance and compliance
+  
+  expected_output: >
+    Comprehensive Legal Document Draft featuring:
+    - Fully structured legal document
+    - Precise legal terminology
+    - Comprehensive clauses covering:
+      * Parties' rights and obligations
+      * Potential legal scenarios
+      * Jurisdictional compliance
+    - Systematic document formatting
+    - Alternative legal provisions
+    - Detailed declarations and attestations
+    - Ready for advanced legal review
+    - Meets highest standards of legal drafting
+  
+  agent: Tier2_agent
+
+Tier3_task:
+  description: >
+    Advanced Legal Document Validation and Enhancement Task
+    
+    Conduct rigorous quality control, legal verification, and document refinement
+    
+    Validation Objectives:
+    - Perform comprehensive legal compliance check
+    - Enhance document precision and legal robustness
+    - Validate against multiple jurisdictional requirements
+    - Add advanced legal protections and clarifications
+    
+    Validation Approach:
+    - Cross-reference with latest legal precedents
+    - Verify absolute legal accuracy
+    - Enhance document with additional protective clauses
+    - Ensure maximum legal precision and clarity
+  
+  expected_output: >
+    Finalized and Validated Legal Document with:
+    - Comprehensive quality assessment report
+    - Detailed legal compliance verification
+    - Enhanced protective legal clauses
+    - Refined legal language
+    - Comprehensive footnotes and citations
+    - Cross-jurisdictional validation
+    - Final version ready for legal submission
+    - Absolute legal precision and clarity
+    - Exhaustive review and enhancement
+  
+  agent: Tier3_agent
